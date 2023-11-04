@@ -1,0 +1,85 @@
+.gridContainer{
+    background: #F4F4F4;
+  }
+  .paperContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch; 
+      background-color: #F9F8F8;
+      text-align: center;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 6.5rem;
+      border-radius: 20px;
+      overflow: hidden;
+  }
+  
+  .innerPaperLeft{
+      background-color: #FFFEFE;
+      margin: 1rem;
+      height: 100%;
+      flex-direction: column;
+      flex: 0.5;
+      text-align: left;
+      margin-left: 3rem;
+  
+  }
+  .innerPaperRight{
+      margin: 1rem;
+      height: 100%;
+      flex: 2;
+      flex-direction: column;
+      margin-right: 3rem;
+      border-radius: 15px;
+  }
+  .filtersContainer {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: right;
+      border-radius: 20px;
+    }
+    .topRowLeft{
+      border-radius: 20px;
+      margin-left: 1rem;
+      margin-top: 1.5rem;
+    }
+    .topRowRight{
+      border-radius: 20px;
+      margin-right: 1rem;
+      margin-top: 1.5rem;
+      text-align: right;
+    }
+    .topRowContainer {
+      display: flex;
+      justify-content: space-between; /* This pushes children to opposite ends */
+      width: 100%;
+  }
+  .logosearchbar{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #FFFEFE;
+      border-radius: 15px;
+  }
+  .searchicon{
+      width: 100%;
+      justify-items: right;
+  }
+  .parentContainer {
+    width: 95%;
+    flex: 2;
+  }
+  
+  .productGridContainer {
+    margin-top: 20px; 
+    width: 95%; 
+    flex-direction: column;
+    margin: 1rem;
+    flex: 1.7;
+  }
+  
+    

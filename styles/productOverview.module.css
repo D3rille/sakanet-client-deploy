@@ -1,0 +1,41 @@
+.gridContainer {
+    background: #f4f4f4;
+    height: max-content;
+  }
+  .paperContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f8f8;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6.5rem;
+    border-radius: 20px;
+    overflow: hidden;
+  
+    align-items: center;
+    height: max-content;
+  }
+  .alternateRow:nth-of-type(odd) {
+    background-color: #fbfbfa;
+  }
+
+  @media (max-width: 600px) {
+    .mobileLayout {
+        flex-direction: column !important;
+    }
+    .mobileCardMedia {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .mobilePaperCardContainer {
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    .paperCardContainer,
+    .paperCardContainer2 {
+        width: 100%;  
+    }
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57.251" height="54.074" viewBox="0 0 57.251 54.074">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a2d100"/>
+      <stop offset="1" stop-color="#32806a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#aad51a"/>
+      <stop offset="1" stop-color="#32806a"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_93" data-name="Path 93" d="M26.778,0C11.728-.124-.188,10.547-.211,26.989c-.014,10.347,9.3,15.889-3.274,18.661,10.793,9.932,30.262,8.328,30.262,8.328A26.989,26.989,0,0,0,26.778,0Z" transform="translate(3.484 0.001)" fill="url(#linear-gradient)"/>
+  <path id="Intersection_1" data-name="Intersection 1" d="M29.531,68.821q-.665-.527-1.295-1.105C40.805,64.943,31.5,59.4,31.51,49.055,31.532,32.612,43.448,21.942,58.5,22.065A27.7,27.7,0,0,1,67.4,23.6,34.622,34.622,0,0,1,29.531,68.821Z" transform="translate(-28.237 -22.064)" fill="url(#linear-gradient-2)"/>
+  <g id="dots" transform="translate(-223.938 98.074)">
+    <circle id="Ellipse_67" data-name="Ellipse 67" cx="3.756" cy="3.756" r="3.756" transform="translate(253.502 -74.157)" fill="#fff"/>
+    <circle id="Ellipse_70" data-name="Ellipse 70" cx="5.634" cy="5.634" r="5.634" transform="translate(238.478 -76.035)" fill="#fff"/>
+    <circle id="Ellipse_68" data-name="Ellipse 68" cx="2.817" cy="2.817" r="2.817" transform="translate(264.771 -73.218)" fill="#fff"/>
+  </g>
+</svg>
