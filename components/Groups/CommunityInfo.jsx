@@ -1,14 +1,14 @@
 import {useState} from "react";
 import { Paper, Typography, Avatar, Box, IconButton, TextField, Button } from "@mui/material";
-import TuneIcon from '@mui/icons-material/Tune';
-import LogoutIcon from '@mui/icons-material/Logout';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import CloseIcon from '@mui/icons-material/Close';
+import TuneIcon from "@mui/icons-material/Tune";
+import LogoutIcon from "@mui/icons-material/Logout";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import CloseIcon from "@mui/icons-material/Close";
 import {useMutation} from "@apollo/client";
 import {useRouter} from "next/router";
 import toast from "react-hot-toast";
@@ -41,7 +41,7 @@ const DeletePoolDialog=({isOpenDialog, setIsOpenDialog, callback})=>{
           aria-label="close"
           onClick={handleClose}
           sx={{
-          position: 'absolute',
+          position: "absolute",
           right: 8,
           top: 8,
           color: (theme) => theme.palette.grey[500],
@@ -52,7 +52,7 @@ const DeletePoolDialog=({isOpenDialog, setIsOpenDialog, callback})=>{
       <DialogContent dividers>
         <DialogContentText>
           Do you really want to delete this group? If you are the creator of this group,
-          enter your password to confirm pool group's deletion.
+          enter your password to confirm pool group"s deletion.
         </DialogContentText>
           <TextField
             value={confirmation}
@@ -199,7 +199,7 @@ const CommunityInfo = ({isAdmin, data, settingsItems}) => {
           zIndex: 0,
         }}
       >
-        {data?.cover_photo && (<img src={data?.cover_photo ?? ""} style={{width:"100%", height:"100%", objectFit:"cover"}} />)}
+        {data?.cover_photo && (<img src={data?.cover_photo ?? ""} alt="cover photo" style={{width:"100%", height:"100%", objectFit:"cover"}} />)}
 
       </Box>
       <Avatar
@@ -248,14 +248,14 @@ const CommunityInfo = ({isAdmin, data, settingsItems}) => {
         overflowY:"auto"}}>
         {data && data?.groupDescription && (<Typography
           variant="caption"
-          sx={{ color: "#777777", fontWeight: "bold", fontSize:'0.79em' }}
+          sx={{ color: "#777777", fontWeight: "bold", fontSize:"0.79em" }}
         >
           About:
         </Typography>)}
         <br/>
         <Typography
           variant="caption"
-          sx={{ color: "#1A1A1A", fontWeight: "bold", fontSize:'0.79em' }}
+          sx={{ color: "#1A1A1A", fontWeight: "bold", fontSize:"0.79em" }}
         >
           {data?.groupDescription}
         </Typography>

@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import {Avatar, Typography} from "@mui/material";
 import CircularLoading from "../circularLoading";
-import {useQuery} from "@apollo/client";
+import {useQuery, useLazyQuery} from "@apollo/client";
 import toast from "react-hot-toast";
 import Link from "next/link";
 
@@ -8,17 +9,28 @@ import styles from '../../styles/Navbar.module.css';
 import {GET_JOINED_GROUPS} from "../../graphql/operations/poolGroup";
 
 const JoinedGroups = () =>{
-    try {
-        var {data, loading, error} = useQuery(GET_JOINED_GROUPS, {
-            onError:(error)=>{
-                toast.error(error.message);
-            }
-        });
+    // try {
+    //     var {data, loading, error} = useQuery(GET_JOINED_GROUPS, {
+    //         onError:(error)=>{
+    //             toast.error(error.message);
+    //         }
+    //     });
         
-    } catch (error) {
-        toast.error("something went wrong");
-        console.error(error)
-    }
+    // } catch (error) {
+    //     toast.error("something went wrong");
+    //     console.error(error)
+    // }
+
+    const [getJoinedGroups, {data, loading, error}] = useLazyQuery(GET_JOINED_GROUPS, {
+        onError:(error)=>{
+            toast.error(error.message);
+        }
+    });
+
+    // call upon mounting
+    useEffect(()=>{
+        getJoinedGroups()
+    },[]);
 
     if (loading){
         return(
