@@ -55,8 +55,6 @@ function MyNetwork(){
     const suggestedGroupsResults = useQuery(GET_SUGGESTED_GROUPS, {
     });
 
-    const managedGroupsResults = useQuery(GET_MANAGED_GROUPS);
-    const joinedGroupsResults = useQuery(GET_MANAGED_GROUPS);
 
     // Accept Connection
     const [acceptConnection, {data:acceptMutationData}] = useMutation(ACCEPT_CONNECTION,{
@@ -151,7 +149,7 @@ function MyNetwork(){
                   </div>
                 </div>
                 <div className={styles.containerlist} style={{padding:"auto", textAlign:"center"}}>
-                  <ManagedGroups managedGroupsResults={managedGroupsResults}/>
+                  <ManagedGroups />
                  </div>
               </div>)}
 
@@ -164,7 +162,7 @@ function MyNetwork(){
                 </div>
                 <div className={styles.containerlist} style={{padding:"auto", textAlign:"center"}}>
                   
-                  <JoinedGroups joinedGroupsResults={joinedGroupsResults}/>
+                  <JoinedGroups />
                  </div>
               </div>)}
             </div>

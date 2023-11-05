@@ -8,10 +8,16 @@ import Link from "next/link";
 import styles from '../../styles/Navbar.module.css';
 import {GET_MANAGED_GROUPS} from "../../graphql/operations/poolGroup";
 
-const ManagedGroups = ({managedGroupsResults}) =>{
+const ManagedGroups = () =>{
    
     // const {data, loading, error}= useQuery(GET_MANAGED_GROUPS);
-    const {data, loading, error}= managedGroupsResults;
+    // const {data, loading, error}= managedGroupsResults;
+    const [getManagedGroups, {data, loading, error}] = useLazyQuery(GET_MANAGED_GROUPS, {
+        onError:(error)=>{
+            toast.error(error.message);
+        }
+    });
+
     if (loading){
         return(
             <div style={{display:"flex", margin:"auto"}}>
