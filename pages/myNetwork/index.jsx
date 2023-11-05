@@ -17,6 +17,7 @@ import MyConnectionList from '../../components/myNetwork/MyConnectionList';
 import Requests from '../../components/myNetwork/Requests';
 import SuggestedUsers from '../../components/myNetwork/SuggestedUser';
 import { GET_CONNECTED_USERS, GET_CONNECTION_REQUESTS, GET_SUGGESTED_USERS } from '../../graphql/operations/myNetwork';
+import { GET_MANAGED_GROUPS, GET_JOINED_GROUPS } from '../../graphql/operations/poolGroup';
 import { ACCEPT_CONNECTION, DECLINE_CONNECTION, REQUEST_CONNECTION } from '../../graphql/operations/myNetwork';
 import { GET_SUGGESTED_GROUPS } from '../../graphql/operations/poolGroup';
 import default_profile from "../../public/images/default_profile.jpg";
@@ -53,6 +54,9 @@ function MyNetwork(){
     });
     const suggestedGroupsResults = useQuery(GET_SUGGESTED_GROUPS, {
     });
+
+    const managedGroupsResults = useQuery(GET_MANAGED_GROUPS);
+    const joinedGroupsResults = useQuery(GET_MANAGED_GROUPS);
 
     // Accept Connection
     const [acceptConnection, {data:acceptMutationData}] = useMutation(ACCEPT_CONNECTION,{
@@ -147,7 +151,7 @@ function MyNetwork(){
                   </div>
                 </div>
                 <div className={styles.containerlist} style={{padding:"auto", textAlign:"center"}}>
-                  <ManagedGroups/>
+                  <ManagedGroups managedGroupsResults={managedGroupsResults}/>
                  </div>
               </div>)}
 
@@ -160,7 +164,7 @@ function MyNetwork(){
                 </div>
                 <div className={styles.containerlist} style={{padding:"auto", textAlign:"center"}}>
                   
-                  <JoinedGroups/>
+                  <JoinedGroups joinedGroupsResults={joinedGroupsResults}/>
                  </div>
               </div>)}
             </div>
