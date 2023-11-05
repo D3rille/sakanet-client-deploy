@@ -54,7 +54,7 @@ const DeletePoolDialog=({isOpenDialog, setIsOpenDialog, callback})=>{
         <DialogContentText>
           <Typography>
             Do you really want to delete this group? If you are the creator of this group,
-            enter your password to confirm pool group"s deletion.
+            enter your password to confirm pool group deletion.
           </Typography>
         </DialogContentText>
           <TextField
@@ -210,7 +210,6 @@ const CommunityInfo = ({isAdmin, data, settingsItems}) => {
           }}
           alt="cover photo"
           />
-        // <img src={data?.cover_photo ?? ""} alt="cover photo" style={{width:"100%", height:"100%", objectFit:"cover"}} />
         )}
 
       </Box>
