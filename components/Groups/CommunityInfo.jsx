@@ -12,6 +12,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import {useMutation} from "@apollo/client";
 import {useRouter} from "next/router";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 import OptionsMenu from "../popups/OptionsMenu";
 import CustomDialog from "../popups/customDialog";
@@ -51,8 +52,10 @@ const DeletePoolDialog=({isOpenDialog, setIsOpenDialog, callback})=>{
       </IconButton>
       <DialogContent dividers>
         <DialogContentText>
-          Do you really want to delete this group? If you are the creator of this group,
-          enter your password to confirm pool group"s deletion.
+          <Typography>
+            Do you really want to delete this group? If you are the creator of this group,
+            enter your password to confirm pool group"s deletion.
+          </Typography>
         </DialogContentText>
           <TextField
             value={confirmation}
@@ -199,7 +202,16 @@ const CommunityInfo = ({isAdmin, data, settingsItems}) => {
           zIndex: 0,
         }}
       >
-        {data?.cover_photo && (<img src={data?.cover_photo ?? ""} alt="cover photo" style={{width:"100%", height:"100%", objectFit:"cover"}} />)}
+        {data?.cover_photo && (
+          <Image
+          src={data?.cover_photo ?? ""}
+          sx={{
+            width:"100%", height:"100%", objectFit:"cover"
+          }}
+          alt="cover photo"
+          />
+        // <img src={data?.cover_photo ?? ""} alt="cover photo" style={{width:"100%", height:"100%", objectFit:"cover"}} />
+        )}
 
       </Box>
       <Avatar
