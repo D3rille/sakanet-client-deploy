@@ -2,6 +2,7 @@ import Logo from "../public/images/LOGO-FINAL.png";
 import Head from 'next/head';
 import { Button } from "@mui/material";
 import {useRouter} from "next/router";
+import Image from "next/image";
 
 export default function PageNotFound(){
     const router = useRouter(); 
@@ -14,8 +15,8 @@ export default function PageNotFound(){
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div style={{display:"flex", flexDirection:"row", width:"50%", margin:"auto",}}>
-                <img 
-                src={"../images/LOGO-FINAL.png"} 
+                <Image 
+                src={Logo} 
                 alt="Sakanet Logo" width={400} 
                 height={300} style={{borderRight:"4px solid green", 
                 marginRight:"3em"}}/>
